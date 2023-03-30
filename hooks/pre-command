@@ -3,7 +3,7 @@
 set -euo pipefail
 
 # Install Python dependencies
-python3 -m "pip" --user "requests"
+pip install requests
 
 # Run the Python script to retrieve secrets
 python get_secrets_azure.py "${BUILDKITE_SECRETS}" > secrets.env
