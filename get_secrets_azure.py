@@ -42,7 +42,9 @@ if __name__ == '__main__':
     # Retrieve the secret values from Azure Key Vault
     secret_values = get_secrets_from_azure(secret_keys)
 
+   
+
     # Output the secret values as environment variable exports
-    with open('secrets.env', 'w') as f:
+    with open('shared_vars.sh', 'w') as f:
         for key, value in secret_values.items():
-            f.write(f'{key}={value}\n')
+            f.write(f'export {key}={value}\n')
