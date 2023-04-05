@@ -6,5 +6,5 @@ set -euo pipefail
 pip3 install requests
 #IFS=',' read -r -a secret_keys <<< "${SECRET_KEYS}"
 # Run the Python script to retrieve secrets
-python3 ${BUILDKITE_PLUGINS_PATH}/github-com-muntashir-islam-azure-keyvault-buildkite-plugin-python-git-v3-0-2/get_secrets_azure.py "${SECRET_KEYS}" "${TAGS}"
+python3 ${BUILDKITE_PLUGINS_PATH}/github-com-muntashir-islam-azure-keyvault-buildkite-plugin-python-git-v3-0-3/get_secrets_azure.py "${SECRET_KEYS}" "${TAGS}"
 #python3 get_secrets_azure.py "" "env=prod,env=dev"
